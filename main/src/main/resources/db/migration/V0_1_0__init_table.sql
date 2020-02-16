@@ -1,6 +1,6 @@
-CREATE TABLE IF NOT EXISTS branch (
-    id number PRIMARY KEY,
+CREATE TABLE IF NOT EXISTS timeline (
+    id bigint PRIMARY KEY,
     name varchar(100),
     tweet varchar(250),
-    created_date varchar(255)
+    created_date timestamp without time zone NOT NULL
 );

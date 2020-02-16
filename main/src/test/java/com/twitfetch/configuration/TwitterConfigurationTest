@@ -1,0 +1,27 @@
+package com.twitfetch.configuration;
+
+import org.junit.Assert;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.test.context.support.AnnotationConfigContextLoader;
+import twitter4j.Twitter;
+
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(classes = TwitterConfiguration.class, loader = AnnotationConfigContextLoader.class)
+public class TwitterConfigurationTest {
+
+    @Autowired
+    private Twitter twitter;
+
+    @Test
+    public void twitterBeanTest() {
+        Assert.assertEquals(twitter.getConfiguration().getOAuthConsumerKey(), "84otArwRf9ES12jdmzpbqoZgM");
+        Assert.assertEquals(twitter.getConfiguration().getOAuthConsumerSecret(), "vRpxbnG1yqs3p0vD9gd1M2a7uuIlOntXOYhzrWWzOuzAnFHqIa");
+        Assert.assertEquals(twitter.getConfiguration().getOAuthAccessToken(), "951999102211964928-fvyWtGVRrWTpTl18pttx4N6nMl2VbaB");
+        Assert.assertEquals(twitter.getConfiguration().getOAuthAccessTokenSecret(), "AiKqACiyvNbOTtUfZ0RYaFPmg8Kg8HcSi3yj8LKcma8Sg");
+    }
+
+}
