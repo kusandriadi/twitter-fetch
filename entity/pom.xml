@@ -15,11 +15,6 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.twitfetch</groupId>
-            <artifactId>master-model</artifactId>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
         </dependency>
@@ -30,15 +25,6 @@
         <dependency>
             <artifactId>hibernate-core</artifactId>
             <groupId>org.hibernate</groupId>
-        </dependency>
-        <dependency>
-            <groupId>javax.validation</groupId>
-            <artifactId>validation-api</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-security</artifactId>
         </dependency>
     </dependencies>
 

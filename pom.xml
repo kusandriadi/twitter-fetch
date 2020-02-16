@@ -26,16 +26,15 @@
 		<lombok.version>1.18.10</lombok.version>
 		<commons-lang3.version>3.9</commons-lang3.version>
 		<thymeleaf-extra.version>3.0.4.RELEASE</thymeleaf-extra.version>
+		<twitter4j.version>4.0.6</twitter4j.version>
 	</properties>
 
 	<modules>
 		<module>entity</module>
-		<module>web</module>
+		<module>main</module>
 		<module>repository</module>
 		<module>service-api</module>
 		<module>service-impl</module>
-		<module>web-model</module>
-		<module>master-model</module>
 	</modules>
 
 	<dependencyManagement>
@@ -49,11 +48,6 @@
 			<dependency>
 				<groupId>com.twitfetch</groupId>
 				<artifactId>entity</artifactId>
-				<version>${project.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>com.twitfetch</groupId>
-				<artifactId>master-model</artifactId>
 				<version>${project.version}</version>
 			</dependency>
 			<dependency>
@@ -73,23 +67,13 @@
 			</dependency>
 			<dependency>
 				<groupId>com.twitfetch</groupId>
-				<artifactId>web</artifactId>
-				<version>${project.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>com.twitfetch</groupId>
-				<artifactId>web-model</artifactId>
+				<artifactId>main</artifactId>
 				<version>${project.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>org.apache.commons</groupId>
 				<artifactId>commons-lang3</artifactId>
 				<version>${commons-lang3.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.thymeleaf.extras</groupId>
-				<artifactId>thymeleaf-extras-springsecurity5</artifactId>
-				<version>${thymeleaf-extra.version}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
@@ -118,6 +102,11 @@
 		<dependency>
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-lang3</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.twitter4j</groupId>
+			<artifactId>twitter4j-stream</artifactId>
+			<version>${twitter4j.version}</version>
 		</dependency>
 	</dependencies>
 
